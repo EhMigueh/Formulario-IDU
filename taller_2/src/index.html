@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Servicio técnico el PERNITO</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-card">
+                <header class="form-header">
+                    <h1>Servicio técnico el PERNITO</h1>
+                    <p>Por favor, complete todos los campos del formulario</p>
+                </header>
+
+                <form action="#" method="POST" class="survey-form">
+                    <section class="form-section">
+                        <h2>Información Personal</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="rut">RUT</label>
+                                <input type="text" id="rut" name="rut" pattern="\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}" placeholder="12.345.678-9" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="facebook">Facebook</label>
+                                <input type="url" id="facebook" name="facebook" placeholder="https://facebook.com/username">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Ubicación -->
+                    <section class="form-section">
+                        <h2>Ubicación</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="address">Dirección</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="country">País</label>
+                                <select id="country" name="country" required>
+                                    <option value="">Seleccione un país</option>
+                                    <option value="CL">Chile</option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="PE">Perú</option>
+                                    <option value="CO">Colombia</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city">Ciudad</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Fechas y Horarios -->
+                    <section class="form-section">
+                        <h2>Fechas y Horarios</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="survey-date">Fecha Encuesta</label>
+                                <input type="date" id="survey-date" name="survey-date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="survey-time">Hora Encuesta</label>
+                                <input type="time" id="survey-time" name="survey-time" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="birth-datetime">Fecha y Hora de Nacimiento</label>
+                                <input type="datetime-local" id="birth-datetime" name="birth-datetime" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="month">Mes</label>
+                                <select id="month" name="month" required>
+                                    <option value="">Seleccione un mes</option>
+                                    <option value="01">Enero</option>
+                                    <option value="02">Febrero</option>
+                                    <option value="03">Marzo</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Mayo</option>
+                                    <option value="06">Junio</option>
+                                    <option value="07">Julio</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Septiembre</option>
+                                    <option value="10">Octubre</option>
+                                    <option value="11">Noviembre</option>
+                                    <option value="12">Diciembre</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Información Adicional -->
+                    <section class="form-section">
+                        <h2>Información Adicional</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="rating">Apreciación de la página web (-10 a 10)</label>
+                                <div class="range-container">
+                                    <input type="range" id="rating" name="rating" min="-10" max="10" value="0" required>
+                                    <output for="rating">0</output>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" placeholder="912345678" required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="referral">¿Cómo nos conociste?</label>
+                                <select id="referral" name="referral" required>
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="social">Redes Sociales</option>
+                                    <option value="search">Buscador</option>
+                                    <option value="friend">Recomendación de un amigo</option>
+                                    <option value="ad">Publicidad</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>Cuestionario</h2>
+                        
+                        <div class="form-group">
+                            <label for="question1">1. ¿Tiene computador en su domicilio?</label>
+                            <div class="radio-group">
+                                <input type="radio" id="question1-yes" name="question1" value="yes" required>
+                                <label for="question1-yes">Sí</label>
+                                <input type="radio" id="question1-no" name="question1" value="no">
+                                <label for="question1-no">No</label>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question2">2. ¿De qué tipo es?</label>
+                            <select id="question2" name="question2" required>
+                                <option value="portatil">Portátil</option>
+                                <option value="escritorio">Escritorio</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question3">3. ¿Cada cuándo lleva su computadora a mantenimiento?</label>
+                            <select id="question3" name="question3" required>
+                                <option value="mensual">Cada mes</option>
+                                <option value="trimestral">Cada 3 meses</option>
+                                <option value="cuando_no_sirve">Cuando la computadora no sirve</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question4">4. ¿Qué sistema operativo tiene?</label>
+                            <select id="question4" name="question4" required>
+                                <option value="windows7">Windows 7</option>
+                                <option value="windows8">Windows 8</option>
+                                <option value="windows10">Windows 10</option>
+                                <option value="windows11">Windows 11</option>
+                                <option value="linux">Linux</option>
+                                <option value="mac">Mac</option>
+                                <option value="otro">Otro (especifique)</option>
+                            </select>
+                            <input type="text" id="question4_other" name="question4_other" placeholder="Especifique" style="display:none;">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question5">5. Si lleva su computadora por fallas, ¿Cuál es la más común?</label>
+                            <select id="question5" name="question5" required>
+                                <option value="no_arranca">No arranca la computadora</option>
+                                <option value="virus">Virus</option>
+                                <option value="falla_fisica">Falla de un componente físico</option>
+                                <option value="ralentizacion">Ralentización del sistema</option>
+                                <option value="otro">Otro (especifique)</option>
+                            </select>
+                            <input type="text" id="question5_other" name="question5_other" placeholder="Especifique" style="display:none;">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question6">6. Generalmente, ¿qué le hacen?</label>
+                            <select id="question6" name="question6" required>
+                                <option value="limpieza">Limpieza</option>
+                                <option value="reiniciar_sistema">Reiniciar el sistema</option>
+                                <option value="vacuna_virus">Vacuna de virus</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question7">7. ¿Dónde lleva a que le den mantenimiento a su computadora?</label>
+                            <select id="question7" name="question7" required>
+                                <option value="opcion1">Técnico el Mike</option>
+                                <option value="opcion2">Megabits</option>
+                                <option value="opcion3">Sistemas Informáticos</option>
+                                <option value="opcion4">Abacomp</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question8">8. El servicio que le dan es:</label>
+                            <select id="question8" name="question8" required>
+                                <option value="eficiente">Eficiente</option>
+                                <option value="bueno">Bueno</option>
+                                <option value="malo">Malo</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question9">9. El precio que le cobran por el servicio de mantenimiento se le hace:</label>
+                            <select id="question9" name="question9" required>
+                                <option value="barato">Barato</option>
+                                <option value="caro">Caro</option>
+                                <option value="bien_cobrado">Bien cobrado</option>
+                            </select>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question10">10. ¿Ha pedido que le hagan software a medida?</label>
+                            <div class="radio-group">
+                                <input type="radio" id="question10-yes" name="question10" value="yes" required>
+                                <label for="question10-yes">Sí</label>
+                                <input type="radio" id="question10-no" name="question10" value="no">
+                                <label for="question10-no">No</label>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label>11. ¿Cómo estima el sistema que le desarrollaron? (1-10)</label>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="question12">12. ¿Qué tipo de programas utiliza?</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="games" name="programs" value="games">
+                                <label for="games">Juegos</label>
+                                <input type="checkbox" id="office" name="programs" value="office">
+                                <label for="office">Suite Ofimática</label>
+                                <input type="checkbox" id="administrative-system" name="programs" value="administrative-system">
+                                <label for="office">Sistemas Administrativos</label>
+                                <input type="checkbox" id="web-programs" name="programs" value="web-programs">
+                                <label for="web-programs">Programas Web</label>
+                                <input type="checkbox" id="otro" name="programs" value="otro">
+                                <label for="otro">Otro (Especifique)</label>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group full-width">
+                            <label for="suggestions">Tiene alguna sugerencia...</label>
+                            <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="internet-time">¿Cuánto navegas por Internet?</label>
+                            <select id="internet-time" name="internet-time" required>
+                                <option value="2hrs">2 hrs al día</option>
+                                <option value="4hrs">4 hrs al día</option>
+                                <option value="6hrs">6 hrs al día</option>
+                                <option value="8hrs">8 hrs al día</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="submit-button">Enviar Encuesta</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
