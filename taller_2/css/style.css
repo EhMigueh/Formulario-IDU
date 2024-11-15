@@ -160,3 +160,56 @@ input:invalid, select:invalid {
         grid-template-columns: 1fr;
     }
 }
+.radio-group{
+    display: flex;
+    flex-direction: row;
+}
+.radio-group input{
+    margin-top: 15px;
+    width: 100%;
+}
+.radio-group label{
+    width: 100%;
+    padding: 12px;
+}
+.checkbox-group{
+    display: flex;
+    flex-direction: row;
+}
+.checkbox-group input{
+    margin-top: 15px;
+    width: 25%;
+}
+.checkbox-group label{
+    width: 75%;
+    padding: 12px;
+    margin-top: 30px;
+}
+table {
+    background: #e5e7eb;
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    margin: 1em;
+  }
+  th {
+    border-bottom: 1px solid #364043;
+    color: #4f46e5;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 1em 1em;
+    text-align: center;
+  }
+  td {
+    color: #374151;
+    font-weight: 400;
+    padding: 0.65em 1em;
+  }
+  .disabled td {
+    color: #4F5F64;
+  }
+  tbody tr {
+    transition: background 0.25s ease;
+  }
+  tbody tr:hover {
+    background: #b0afca;
+  }
