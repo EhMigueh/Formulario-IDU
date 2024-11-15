@@ -21,12 +21,12 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="name">Nombre Completo</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="text" id="name" name="name" placeholder="Juanito Perez" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Correo Electrónico</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" placeholder="abcd@gmail.com" required>
                             </div>
 
                             <div class="form-group">
@@ -71,7 +71,7 @@
 
                     <!-- Fechas y Horarios -->
                     <section class="form-section">
-                        <h2>Fechas y Horarios</h2>
+                        <h2>Encuesta</h2>
                         
                         <div class="form-grid">
                             <div class="form-group">
@@ -83,7 +83,11 @@
                                 <label for="survey-time">Hora Encuesta</label>
                                 <input type="time" id="survey-time" name="survey-time" required>
                             </div>
-
+                        </div>
+                    </section>
+                    <section class="form-section">
+                        <h2>Datos de Nacimiento</h2>
+                        <div class="form-grid">
                             <div class="form-group">
                                 <label for="birth-datetime">Fecha y Hora de Nacimiento</label>
                                 <input type="datetime-local" id="birth-datetime" name="birth-datetime" required>
@@ -105,6 +109,17 @@
                                     <option value="10">Octubre</option>
                                     <option value="11">Noviembre</option>
                                     <option value="12">Diciembre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="week">Semana</label>
+                                <select id="week" name="week" required>
+                                    <option value="">Seleccione una semana</option>
+                                    <option value="01">Primera</option>
+                                    <option value="02">Segunda</option>
+                                    <option value="03">Tercera</option>
+                                    <option value="04">Cuarta</option>
+                                    <option value="05">Quinta</option>
                                 </select>
                             </div>
                         </div>
@@ -139,21 +154,29 @@
                                     <option value="other">Otro</option>
                                 </select>
                             </div>
+                            <div class="form-group colorFav">
+                                <label for="favColor">¿Cual es tu color favorito?</label>
+                                <input type="color" id="favColor" name="favColor" required>
+                            </div>
                         </div>
                     </section>
 
                     <section class="form-section">
                         <h2>Cuestionario</h2>
-                        
                         <div class="form-group">
                             <label for="question1">1. ¿Tiene computador en su domicilio?</label>
                             <div class="radio-group">
-                                <input type="radio" id="question1-yes" name="question1" value="yes" required>
+                                <div>
+                                <input type="radio" id="question1-yes" name="question1" value="yes" checked>
                                 <label for="question1-yes">Sí</label>
+                                </div>
+                                <div>
                                 <input type="radio" id="question1-no" name="question1" value="no">
                                 <label for="question1-no">No</label>
+                                </div>
                             </div>
                         </div>
+                    
                     
                         <div class="form-group">
                             <label for="question2">2. ¿De qué tipo es?</label>
@@ -239,15 +262,153 @@
                         <div class="form-group">
                             <label for="question10">10. ¿Ha pedido que le hagan software a medida?</label>
                             <div class="radio-group">
-                                <input type="radio" id="question10-yes" name="question10" value="yes" required>
+                                <div>
+                                <input type="radio" id="question10-yes" name="question10" value="yes" checked>
                                 <label for="question10-yes">Sí</label>
+                            </div>
+                            <div>
                                 <input type="radio" id="question10-no" name="question10" value="no">
                                 <label for="question10-no">No</label>
+                            </div>
                             </div>
                         </div>
                     
                         <div class="form-group">
                             <label>11. ¿Cómo estima el sistema que le desarrollaron? (1-10)</label>
+                            <section>
+                                
+
+<table>
+    <thead>
+      <tr>
+        <th>
+        <th>1
+        <th>2
+        <th>3
+        <th>4
+        <th>5
+        <th>6
+        <th>7
+        <th>8
+        <th>9
+        <th>10
+    </thead>
+    <tbody>
+    <tr>
+        <td>tamaño
+        <td><input type="radio" id="1_1" name="1_1" value="1"></td>
+        <td><input type="radio" id="1_2" name="1_2" value="2"></td>
+        <td><input type="radio" id="1_3" name="1_3" value="3"></td>
+        <td><input type="radio" id="1_4" name="1_4" value="4"></td>
+        <td><input type="radio" id="1_5" name="1_5" value="5"></td>
+        <td><input type="radio" id="1_6" name="1_6" value="6"></td>
+        <td><input type="radio" id="1_7" name="1_7" value="7"></td>
+        <td><input type="radio" id="1_8" name="1_8" value="8"></td>
+        <td><input type="radio" id="1_9" name="1_9" value="9"></td>
+        <td><input type="radio" id="1_10" name="1_10" value="10"></td>
+    <tr>
+        <td>Funcionalidad
+            <td><input type="radio" id="2_1" name="2_1" value="1"></td>
+            <td><input type="radio" id="2_2" name="2_2" value="2"></td>
+            <td><input type="radio" id="2_3" name="2_3" value="3"></td>
+            <td><input type="radio" id="2_4" name="2_4" value="4"></td>
+            <td><input type="radio" id="2_5" name="2_5" value="5"></td>
+            <td><input type="radio" id="2_6" name="2_6" value="6"></td>
+            <td><input type="radio" id="2_7" name="2_7" value="7"></td>
+            <td><input type="radio" id="2_8" name="2_8" value="8"></td>
+            <td><input type="radio" id="2_9" name="2_9" value="9"></td>
+            <td><input type="radio" id="2_10" name="2_10" value="10"></td>
+    <tr>
+        <td>Accesibilidad
+            <td><input type="radio" id="3_1" name="3_1" value="1"></td>
+            <td><input type="radio" id="3_2" name="3_2" value="2"></td>
+            <td><input type="radio" id="3_3" name="3_3" value="3"></td>
+            <td><input type="radio" id="3_4" name="3_4" value="4"></td>
+            <td><input type="radio" id="3_5" name="3_5" value="5"></td>
+            <td><input type="radio" id="3_6" name="3_6" value="6"></td>
+            <td><input type="radio" id="3_7" name="3_7" value="7"></td>
+            <td><input type="radio" id="3_8" name="3_8" value="8"></td>
+            <td><input type="radio" id="3_9" name="3_9" value="9"></td>
+            <td><input type="radio" id="3_10" name="3_10" value="10"></td>
+    <tr>
+        <td>Fiabilidad
+            <td><input type="radio" id="4_1" name="4_1" value="1"></td>
+            <td><input type="radio" id="4_2" name="4_2" value="2"></td>
+            <td><input type="radio" id="4_3" name="4_3" value="3"></td>
+            <td><input type="radio" id="4_4" name="4_4" value="4"></td>
+            <td><input type="radio" id="4_5" name="4_5" value="5"></td>
+            <td><input type="radio" id="4_6" name="4_6" value="6"></td>
+            <td><input type="radio" id="4_7" name="4_7" value="7"></td>
+            <td><input type="radio" id="4_8" name="4_8" value="8"></td>
+            <td><input type="radio" id="4_9" name="4_9" value="9"></td>
+            <td><input type="radio" id="4_10" name="4_10" value="10"></td>
+    <tr>
+        <td>Precio
+            <td><input type="radio" id="5_1" name="5_1" value="1"></td>
+            <td><input type="radio" id="5_2" name="5_2" value="2"></td>
+            <td><input type="radio" id="5_3" name="5_3" value="3"></td>
+            <td><input type="radio" id="5_4" name="5_4" value="4"></td>
+            <td><input type="radio" id="5_5" name="5_5" value="5"></td>
+            <td><input type="radio" id="5_6" name="5_6" value="6"></td>
+            <td><input type="radio" id="5_7" name="5_7" value="7"></td>
+            <td><input type="radio" id="5_8" name="5_8" value="8"></td>
+            <td><input type="radio" id="5_9" name="5_9" value="9"></td>
+            <td><input type="radio" id="5_10" name="5_10" value="10"></td>
+    <tr>
+        <td>Diseño
+            <td><input type="radio" id="6_1" name="6_1" value="1"></td>
+            <td><input type="radio" id="6_2" name="6_2" value="2"></td>
+            <td><input type="radio" id="6_3" name="6_3" value="3"></td>
+            <td><input type="radio" id="6_4" name="6_4" value="4"></td>
+            <td><input type="radio" id="6_5" name="6_5" value="5"></td>
+            <td><input type="radio" id="6_6" name="6_6" value="6"></td>
+            <td><input type="radio" id="6_7" name="6_7" value="7"></td>
+            <td><input type="radio" id="6_8" name="6_8" value="8"></td>
+            <td><input type="radio" id="6_9" name="6_9" value="9"></td>
+            <td><input type="radio" id="6_10" name="6_10" value="10"></td>
+    <tr>
+        <td>Calidad
+            <td><input type="radio" id="7_1" name="7_1" value="1"></td>
+            <td><input type="radio" id="7_2" name="7_2" value="2"></td>
+            <td><input type="radio" id="7_3" name="7_3" value="3"></td>
+            <td><input type="radio" id="7_4" name="7_4" value="4"></td>
+            <td><input type="radio" id="7_5" name="7_5" value="5"></td>
+            <td><input type="radio" id="7_6" name="7_6" value="6"></td>
+            <td><input type="radio" id="7_7" name="7_7" value="7"></td>
+            <td><input type="radio" id="7_8" name="7_8" value="8"></td>
+            <td><input type="radio" id="7_9" name="7_9" value="9"></td>
+            <td><input type="radio" id="7_10" name="7_10" value="10"></td>
+    <tr>
+        <td>Durabilidad
+            <td><input type="radio" id="8_1" name="8_1" value="1"></td>
+            <td><input type="radio" id="8_2" name="8_2" value="2"></td>
+            <td><input type="radio" id="8_3" name="8_3" value="3"></td>
+            <td><input type="radio" id="8_4" name="8_4" value="4"></td>
+            <td><input type="radio" id="8_5" name="8_5" value="5"></td>
+            <td><input type="radio" id="8_6" name="8_6" value="6"></td>
+            <td><input type="radio" id="8_7" name="8_7" value="7"></td>
+            <td><input type="radio" id="8_8" name="8_8" value="8"></td>
+            <td><input type="radio" id="8_9" name="8_9" value="9"></td>
+            <td><input type="radio" id="8_10" name="8_10" value="10"></td>
+    <tr>
+        <td>Comodidad
+            <td><input type="radio" id="9_1" name="9_1" value="1"></td>
+            <td><input type="radio" id="9_2" name="9_2" value="2"></td>
+            <td><input type="radio" id="9_3" name="9_3" value="3"></td>
+            <td><input type="radio" id="9_4" name="9_4" value="4"></td>
+            <td><input type="radio" id="9_5" name="9_5" value="5"></td>
+            <td><input type="radio" id="9_6" name="9_6" value="6"></td>
+            <td><input type="radio" id="9_7" name="9_7" value="7"></td>
+            <td><input type="radio" id="9_8" name="9_8" value="8"></td>
+            <td><input type="radio" id="9_9" name="9_9" value="9"></td>
+            <td><input type="radio" id="9_10" name="9_10" value="10"></td>
+
+      
+    </tbody>
+  </table>
+  
+  
+                            </section>
                         </div>
                     
                         <div class="form-group">
@@ -268,7 +429,7 @@
                     
                         <div class="form-group full-width">
                             <label for="suggestions">Tiene alguna sugerencia...</label>
-                            <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+                            <textarea id="suggestions" name="suggestions" rows="4" placeholder="Escriba su sugerencia aqui"></textarea>
                         </div>
                     
                         <div class="form-group">
@@ -280,6 +441,7 @@
                                 <option value="8hrs">8 hrs al día</option>
                             </select>
                         </div>
+                    
                     </section>
 
                     <button type="submit" class="submit-button">Enviar Encuesta</button>
